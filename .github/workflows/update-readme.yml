@@ -1,0 +1,32 @@
+name: Auto-update README
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Contents.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run sync script
+        run: bash scripts/sync_readme.sh
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: auto-update README from contents.txt"
+            git push
+          else
+            echo "No changes to README.md, skipping commit"
+          fi
