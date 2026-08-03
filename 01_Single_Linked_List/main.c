@@ -1,42 +1,38 @@
 #include "sll.h"
-
-int main()
-{
-	
+int main(){
 	int option, data, key;
 
+	S_list *head = NULL; //initialize the header to NULL
 
-	Slist *head = NULL; //initialize the header to NULL
-
-	printf("1. Insert last\n2. Insert first\n3. Delete Last\n4. Delete first\n5. Delete list\n6. Find node\n7. Print list\n8. Exit\nEnter your choice : ");
-
-	while (1)
-	{
-
-		/*ask user options*/
-
+	printf("1. Insert last\n");
+	printf("2. Insert first\n");
+	printf("3. Delete Last\n");
+	printf("4. Delete first\n");
+	printf("5. Delete list\n");
+	printf("6. Find node\n");
+	printf("7. Print list\n");
+	printf("8. Exit\n");
+	
+	while (1){
+		printf("Enter your choice : ");
 		scanf("%d", &option);
 		
-		switch (option)
-		{
+		switch (option){
 			case 1:
 				printf("Enter the number that you want to insert at last: ");
 				scanf("%d", &data);
 			
                 
-				/*insert_at_last function call*/
-				if (insert_at_last(&head, data) == FAILURE) //pass by reference
-				{
+				if (insert_at_last(&head, data) == FAILURE){							// here we are doing pass by referece for head, as we need to modify the address the head is pointing to.
 					printf("INFO : Insertion Failure\n");
 				}
 				break;
+
 			case 2:
-				/*To insert the element at first */
 				printf("Enter the element you have to insert at the first : ");
 				scanf("%d", &data);
 				
-				if (insert_at_first(&head, data) == -1)
-				{
+				if (insert_at_first(&head, data) == -1){
 					printf("INFO : Insertion Failure\n");
 				}
 				break;
@@ -93,13 +89,13 @@ int main()
 			case 7:
 				/* print list function call*/
 				print_list(head);
-					break;
+				break;
 	
 			case 8:
 				return SUCCESS;
+
 			default: printf("Enter proper choice !!\n");
-			
-					 break;
+				break;
 		}
 	    
 
