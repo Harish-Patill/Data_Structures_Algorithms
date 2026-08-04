@@ -5,6 +5,7 @@
 03-Delete at Last.
 04-Delete at First.
 05-Delete the whole List.
-
+06-Find Node.
+07-Print all the elements from the List.
 -----------------------------------------------------------------------------------------------------------------------------------------
 2. Doubley Linked List:
