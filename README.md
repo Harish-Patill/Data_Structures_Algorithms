@@ -1,7 +1,7 @@
 # Data_Structures_Algorithms
 DSA with C programming.
 
-01-Single Linked List: 
+### Contents
 <!-- QUESTIONS_START -->
 ```
 1. Single Linked List: 
