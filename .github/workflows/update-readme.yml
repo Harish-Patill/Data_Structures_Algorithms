@@ -1,47 +1,24 @@
-name: Auto-update README
-
+name: Update README with Practice Questions
 on:
   push:
-    branches: [ main ]
     paths:
-      - 'Contents.txt'
-
-permissions:
-  contents: write
-
+      - 'questions.txt'
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Run sync script
-        run: bash scripts/sync_readme.sh
+      - name: Compile sync program
+        run: gcc -o sync_readme scripts/sync_readme.c
 
-      
-      - name: Commit and push if changed
-        run: |
-          git config user.name "segfault-bot"
-          git config user.email "segfault-bot@users.noreply.github.com"
-          git add README.md
-          if ! git diff --cached --quiet; then
-            git commit -m "docs: auto-update README from contents.txt"
-            git push
-          else
-            echo "No changes to README.md, skipping commit"
-          fi
+      - name: Inject questions.txt into README
+        run: ./sync_readme
 
-
-
-      # - name: Commit and push if changed
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "github-actions[bot]@users.noreply.github.com"
-      #     git add README.md
-      #     if ! git diff --cached --quiet; then
-      #       git commit -m "docs: auto-update README from contents.txt"
-      #       git push
-      #     else
-      #       echo "No changes to README.md, skipping commit"
-      #     fi
+      - name: Commit and push updated README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update README from questions.txt"
