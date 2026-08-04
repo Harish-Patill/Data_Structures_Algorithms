@@ -2,7 +2,7 @@ name: Update README with Practice Questions
 on:
   push:
     paths:
-      - 'questions.txt'
+      - 'Contents.txt'
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -21,4 +21,4 @@ jobs:
       - name: Commit and push updated README
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: auto-update README from questions.txt"
+          commit_message: "docs: auto-update README from Contents.txt"

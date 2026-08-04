@@ -21,7 +21,7 @@ char *read_file(const char *path, long *out_len){
 
 int main(){
     long q_len, r_len;
-    char *questions=read_file("questions.txt",&q_len);
+    char *questions=read_file("Contents.txt",&q_len);
     char *readme=read_file("README.md",&r_len);
 
     // trim trailing whitespace/newlines from questions content
