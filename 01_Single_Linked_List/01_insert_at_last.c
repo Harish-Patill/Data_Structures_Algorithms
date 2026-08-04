@@ -24,5 +24,6 @@ int insert_at_last(S_list **head, int given_data){
         temp=temp->link;
     }
     temp->link=new_node;                                        // and updat the last nodes link part with the new node, as it is now supposed to point to the new node.
+    
     return SUCCESS;
 }
