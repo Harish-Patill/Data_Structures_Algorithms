@@ -6,6 +6,9 @@
 
 #define SUCCESS 0
 #define FAILURE -1
+#define DATA_NOT_FOUND -2
+#define LIST_EMPTY -4
+#define POSITION_NOT_FOUND -3
 
 typedef struct node{										// structure
 	int data;
@@ -13,22 +16,32 @@ typedef struct node{										// structure
 }S_list;
 
 
-int insert_at_last(S_list **head, int);					// inserts at last
-
-
-
-
-
-
-
-
-
-
-int find_node(S_list *head, int key);
-int insert_at_first(S_list **head, int);
-int sl_delete_list(S_list **);
+int insert_at_last(S_list **head, int);					
+int insert_at_first(S_list **head, int);				
 int sl_delete_last(S_list **);
 int sl_delete_first(S_list **);
+int sl_delete_list(S_list **);
+int find_node(S_list *head, int key);
 void print_list(S_list *head);
 
+
+
+
+
+
+
+int sl_insert_after(S_list **head, int , int);
+int sl_insert_before(S_list **head, int , int );
+int sl_insert_nth(S_list **head, int , int);
+int sl_delete_element(S_list **head, int);
+
+
 #endif
+
+
+
+
+
+
+
+
