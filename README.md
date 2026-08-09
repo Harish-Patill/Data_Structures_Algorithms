@@ -12,7 +12,11 @@ DSA with C programming.
 04-Delete at First.
 05-Delete the whole List.
 06-Find Node.
-07-Print all the elements from the List.
+07-Insert after.
+08-Insert before.
+09-Insert nth.
+10-Delete element.
+11-Print all the elements from the List.
 -----------------------------------------------------------------------------------------------------------------------------------------
 2. Doubley Linked List:
 
