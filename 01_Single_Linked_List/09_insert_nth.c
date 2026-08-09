@@ -1,3 +1,44 @@
+#include "sll.h"
+
+int sl_insert_nth(S_list **head, int data, int n){
+    int count=1;
+    S_list *temp=*head;
+    S_list *prev=NULL;
+
+    if(*head == NULL && n>1){                                   // if list is empty and then the new node cant be other than the first node
+        return LIST_EMPTY;
+    }
+
+    while(temp && count<n){                                     // this will update the temp and prev until the count and the n are equal
+        prev=temp;
+        temp=temp->link;
+        count++;
+    }
+    
+    S_list *new_node=malloc(sizeof(S_list));                    // create a new node
+    if(new_node == NULL){
+        return FAILURE;
+    }
+
+    new_node->data=data;                                        // update the new nodes data with the given data
+    new_node->link=NULL;                                        // update the new nodes link with NULL;
+
+    if(count==n){                                               // if the count and the n match then do the insertion (they should match as of now)          
+        new_node->link=temp;                                    // temp is the next node after new_node             
+
+        if(prev){                                               
+            prev->link=new_node;                                // prev is the previous node to the new_node
+        }
+        else{                                                   // if the prev is empty then the new node is first node
+            *head=new_node;
+        }
+        return SUCCESS;
+    }
+
+    free(new_node);
+    return POSITION_NOT_FOUND;
+}
+
 // #include "sll.h"
 
 // int sl_insert_nth(S_list **head, int data, int n){
@@ -52,43 +93,3 @@
 
 
 
-#include "sll.h"
-
-int sl_insert_nth(S_list **head, int data, int n){
-    int count=1;
-    S_list *temp=*head;
-    S_list *prev=NULL;
-
-    if(*head == NULL && n>1){                                   // if list is empty and then the new node cant be other than the first node
-        return LIST_EMPTY;
-    }
-
-    while(temp && count<n){                                     // this will update the temp and prev until the count and the n are equal
-        prev=temp;
-        temp=temp->link;
-        count++;
-    }
-    
-    S_list *new_node=malloc(sizeof(S_list));                    // create a new node
-    if(new_node == NULL){
-        return FAILURE;
-    }
-
-    new_node->data=data;                                        // update the new nodes data with the given data
-    new_node->link=NULL;                                        // update the new nodes link with NULL;
-
-    if(count==n){                                               // if the count and the n match then do the insertion (they should match as of now)          
-        new_node->link=temp;                                    // temp is the next node after new_node             
-
-        if(prev){                                               
-            prev->link=new_node;                                // prev is the previous node to the new_node
-        }
-        else{                                                   // if the prev is empty then the new node is first node
-            *head=new_node;
-        }
-        return SUCCESS;
-    }
-
-    free(new_node);
-    return POSITION_NOT_FOUND;
-}
