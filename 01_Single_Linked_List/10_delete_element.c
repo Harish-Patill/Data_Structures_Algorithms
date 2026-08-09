@@ -1,6 +1,5 @@
 #include "sll.h"
 
-int sl_delete_element(Slist **head, data_t data)
-{
+int sl_delete_element(S_list **head, int data){
 
 }
