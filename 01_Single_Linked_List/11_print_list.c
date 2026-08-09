@@ -9,6 +9,5 @@ void print_list(S_list *head){
 		printf("%d -> ",head->data);
 		head=head->link;
 	}
-
 	printf("NULL\n");
 }
