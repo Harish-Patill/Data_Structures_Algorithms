@@ -1,4 +1,4 @@
-1. Single Linked List: 
+1. Single Linked List Basic Operations: 
 
 01-Insert at Last.
 02-Insert at First.
@@ -12,7 +12,12 @@
 10-Delete element.
 11-Print all the elements from the List.
 ----------------------------------------------------------------------------------------------
-2. Doubley Linked List:
+2. Single Linked List Programs:
+
+01-
+02-
+----------------------------------------------------------------------------------------------
+3. Doubley Linked List:
 
 01-
 02-
