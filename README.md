@@ -4,7 +4,7 @@ DSA with C programming.
 ### Contents
 <!-- QUESTIONS_START -->
 ```
-1. Single Linked List: 
+1. Single Linked List Basic Operations: 
 
 01-Insert at Last.
 02-Insert at First.
@@ -18,9 +18,23 @@ DSA with C programming.
 10-Delete element.
 11-Print all the elements from the List.
 ----------------------------------------------------------------------------------------------
-2. Doubley Linked List:
+2. Single Linked List Programs:
 
 01-
 02-
+----------------------------------------------------------------------------------------------
+3. Doubley Linked List:
+
+01-
+02-
+----------------------------------------------------------------------------------------------
+Projects:
+
+01-Arbitrary_Precision_Calculator : (status - done w Addition)
+    
+    1.Addition
+    2.Subtraction
+    3.Multiplication
+    4.Division
 ```
 <!-- QUESTIONS_END -->
