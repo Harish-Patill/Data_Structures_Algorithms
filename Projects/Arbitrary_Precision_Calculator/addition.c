@@ -3,7 +3,7 @@ void addition(node *tail1, node *tail2, node **result_head, node **result_tail, 
     int ans=0;
     int count=0;
         
-    // case 1 if both the numbers are of same length
+    // case 1: if both the numbers are of same length
     if(op1_len == op2_len){                                                                         
         while((tail1 != NULL) && (tail2 != NULL)){ 
             ans=tail1->data + tail2->data + count;                                                  // storing ans
@@ -24,7 +24,7 @@ void addition(node *tail1, node *tail2, node **result_head, node **result_tail, 
         }                                           
     }
     
-    // case 2 if the 1st operand is long
+    // case 2: if the 1st operand is long
     if(op1_len>op2_len){
         while((tail1 != NULL) && (tail2 != NULL)){
             ans=tail1->data + tail2->data + count;                                                  // ans holds the ans
@@ -61,7 +61,7 @@ void addition(node *tail1, node *tail2, node **result_head, node **result_tail, 
         }
     }
     
-    // case 3 if the 2nd operand is long
+    // case 3: if the 2nd operand is long
     if(op2_len>op1_len){
         while((tail1 != NULL) && (tail2 != NULL)){
             ans=tail1->data + tail2->data + count;
