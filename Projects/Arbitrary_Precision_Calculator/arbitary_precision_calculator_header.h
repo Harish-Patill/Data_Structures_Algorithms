@@ -10,6 +10,9 @@
 #define SUCCESS		1
 #define FAILURE		0
 
+#define POSITIVE	1
+#define NEGATIVE	0
+
 #define SAME		0
 #define OPERAND1	1
 #define OPERAND2	2
