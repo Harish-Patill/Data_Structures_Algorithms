@@ -24,7 +24,7 @@
 ----------------------------------------------------------------------------------------------
 Projects:
 
-01-Arbitrary_Precision_Calculator : (status - done w Addition)
+01-Arbitrary_Precision_Calculator : (status - Addition and Subtraction(except if each operands are of different signed integers))
     
     1.Addition
     2.Subtraction
