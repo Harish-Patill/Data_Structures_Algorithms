@@ -67,8 +67,15 @@ int main(int argc, char *argv[]){
 	    addition(tail1, tail2, &result_head, &result_tail,operand_1_len,operand_2_len);
 		print_list(result_head);
 	    break;
-
+		
 	case '-':
+		if(subtraction(head1, head2,tail1, tail2, &result_head, &result_tail,operand_1_len,operand_2_len) == POSITIVE){
+			print_list(result_head);
+		}
+		else{
+			printf("-");
+			print_list(result_head);
+		}
 	    break;
 
 	case 'x':
