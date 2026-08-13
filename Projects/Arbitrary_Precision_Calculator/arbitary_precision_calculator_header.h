@@ -21,8 +21,8 @@ typedef struct node{
 }node;
 
 // void addition(node *tail1, node *tail2, node **headR, node **tailR);
-void addition(node *tail1, node *tail2, node **headR, node **tailR, int op1_len, int op2_len);
-void subtraction(node *tail1, node *tail2, node **headR, node **tailR);
+void addition(node *tail1, node *tail2, node **result_head, node **result_tail, int op1_len, int op2_len);
+void subtraction(node *tail1, node *tail2, node **result_head, node **result_tail, int op1_len, int op2_len);
 void multiplication(node *tail1, node *tail2, node **headR, node **tailR);
 void division(node *head1, node *head2, node **headR, node **tailR);
 
