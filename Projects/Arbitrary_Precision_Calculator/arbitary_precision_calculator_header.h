@@ -44,5 +44,7 @@ int list_len(node *head);
 void remove_pre_zeros(node **head);
 
 void insert_operand(node **head, node **tail, char *operand, int len);
+int compare_magnitude(node *head1, node *head2);
+void remove_leading_zeros(node **head, node **tail);
 
 #endif
