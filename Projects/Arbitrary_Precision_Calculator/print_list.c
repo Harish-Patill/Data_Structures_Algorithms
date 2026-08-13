@@ -5,6 +5,7 @@ void print_list(node *head){
 		printf("INFO : List is empty\n");
 	}
     else{
+		printf("\nAns: ");
 	    while (head){
 		    printf("%d", head -> data);
 		    head = head -> next;
