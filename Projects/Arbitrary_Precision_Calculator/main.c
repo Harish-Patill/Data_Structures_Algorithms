@@ -1,4 +1,14 @@
 #include "arbitary_precision_calculator_header.h"
+
+int list_length(node *head){
+	int count = 0;
+	while(head != NULL){
+		count++;
+		head = head->next;
+	}
+	return count;
+}
+
 int main(int argc, char *argv[]){
     node *head1 = NULL, *tail1 = NULL, *head2 = NULL, *tail2 = NULL, *result_head = NULL, *result_tail = NULL;
 	int i,j; 
@@ -53,14 +63,20 @@ int main(int argc, char *argv[]){
 	
     char oper = argv[2][0];
 
-	int operand_1_len=strlen(argv[1]);
-	int operand_2_len=strlen(argv[3]);
+	int operand_1_str_len = strlen(argv[1]);
+	int operand_2_str_len = strlen(argv[3]);
 
+	insert_operand(&head1, &tail1, argv[1], operand_1_str_len);
+	insert_operand(&head2, &tail2, argv[3], operand_2_str_len);
+
+	remove_leading_zeros(&head1, &tail1);   // len param no longer needed inside this fn if you're recomputing it next — see note below
+	remove_leading_zeros(&head2, &tail2);
+
+	int operand_1_len = list_length(head1);       // the true, sign-stripped, zero-stripped digit count
+	int operand_2_len = list_length(head2);
+	
 	// operand testing
 	// printf("%d %d",operand_1_len,operand_2_len);
-
-	insert_operand(&head1, &tail1, argv[1], operand_1_len);
-	insert_operand(&head2, &tail2, argv[3], operand_2_len);
 
     switch(oper){
 	case '+':
