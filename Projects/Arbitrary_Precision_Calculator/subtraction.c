@@ -7,8 +7,8 @@ int subtraction(node *head1, node *head2, node *tail1, node *tail2, node **resul
     // case 1: if both the numbers are of same length
     if(op1_len == op2_len){              
         
-        largest = compare_magnitude(head1, head2);
-        if((largest == 1) || (largest == 0)){
+        largest = compare_magnitude(head1, head2);               // in order to handle special cases like 19 - 91, where both are equal length, but 1st operand is largest
+        if((largest == 1) || (largest == 0)){                    // if first operand is largest
             while((tail1 != NULL) && (tail2 != NULL)){
                 if((tail1->data) >= (tail2->data)){
                     ans=tail1->data - tail2->data;   
@@ -26,7 +26,7 @@ int subtraction(node *head1, node *head2, node *tail1, node *tail2, node **resul
             }
             return POSITIVE;
         }
-        if(largest == 2){
+        if(largest == 2){                                       // if second operand is largest
             while((tail1 != NULL) && (tail2 != NULL)){
                 if((tail2->data) >= (tail1->data)){
                     ans=tail2->data - tail1->data;   
