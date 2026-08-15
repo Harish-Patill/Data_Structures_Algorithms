@@ -16,6 +16,7 @@
 
 01-WAP to find the middle element of a Single Linked List
 02-WAP to find the nth last element from the List
+03-WAP to insert the new data in sorted order.
 ----------------------------------------------------------------------------------------------
 3. Doubley Linked List:
 
