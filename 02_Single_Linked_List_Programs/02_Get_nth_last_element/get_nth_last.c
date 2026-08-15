@@ -1,15 +1,15 @@
 #include "sll.h"
 int find_nth_last(Slist *head, int pos, int *data){
+    int i;
     Slist *first=head;
     Slist *second=head;
-    int i;
 
     if(head == NULL){
         return LIST_EMPTY;
     }
 
     if(pos <= 0){               // pos should be greater than 0
-        return FAILURE;   
+        return FAILURE;
     }
 
     for(i=0;i<pos;i++){         // move second pointer 'pos' nodes ahead
