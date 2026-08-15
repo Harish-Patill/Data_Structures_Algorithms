@@ -1,6 +1,6 @@
 #include "sll.h"
 
-/* Function for finding the loop in the link */
+// Function for finding the loop in the link
 int find_loop(Slist *head){
     Slist *slow=head;
     Slist *fast=head;
@@ -16,7 +16,6 @@ int find_loop(Slist *head){
         if(slow == fast){
             return SUCCESS;
         }
-        
     }
     
     return LOOP_NOT_FOUND;
