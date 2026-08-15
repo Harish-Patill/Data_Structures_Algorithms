@@ -20,8 +20,10 @@ DSA with C programming.
 ----------------------------------------------------------------------------------------------
 2. Single Linked List Programs:
 
-01-
-02-
+01-WAP to find the middle element of a Single Linked List
+02-WAP to find the nth last element from the List
+03-WAP to insert the new data in sorted order.
+04-WAP to create a loop in a list, and to find if the list has a loop.
 ----------------------------------------------------------------------------------------------
 3. Doubley Linked List:
 
@@ -30,7 +32,7 @@ DSA with C programming.
 ----------------------------------------------------------------------------------------------
 Projects:
 
-01-Arbitrary_Precision_Calculator : (status - Addition and Subtraction(except if each operands are of different signed integers))
+01-Arbitrary_Precision_Calculator : (status - Addition and Subtraction(except if each operands are of different signs))
     
     1.Addition
     2.Subtraction
